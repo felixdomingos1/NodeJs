@@ -49,9 +49,9 @@
 // console.log(files)
 
 // # reading files #    
-const fs = require('fs')
+// const fs = require('fs')
 
-const text = fs.readFileSync('./text.md',  { encoding: 'utf-8' })
+// const text = fs.readFileSync('./text.md',  { encoding: 'utf-8' })
 
 // console.log(text)
 
@@ -60,18 +60,18 @@ const text = fs.readFileSync('./text.md',  { encoding: 'utf-8' })
 // an existing one.
 // const fs = require('fs')
 
-fs.writeFile('new_file.txt',text , { flag: 'a+' }, (err) => {
-    if (err) throw err
-})
-
-// # create directories #
-// const fs = require('fs')
-
-// if (fs.existsSync('new_dir')) return;
-
-// fs.mkdir('new_dir', (err) => {
+// fs.writeFile('new_file.txt',text , { flag: 'a+' }, (err) => {
 //     if (err) throw err
 // })
+
+// # create directories #
+const fs = require('fs')
+
+if (fs.existsSync('new_dir')) return;
+
+fs.mkdir('new_dir', (err) => {
+    if (err) throw err
+})
 
 // # renaming, moving and removing files #
 //const fs = require('fs')
