@@ -67,7 +67,7 @@
 // # create directories #
 // const fs = require('fs')
 
-// const directName = 'teu'
+// const directName = 'new_dir'
 
 
 // if (fs.existsSync(directName)) return ;
@@ -77,41 +77,41 @@
 // })
 
 // # renaming, moving and removing files #
-const fs = require('fs')
+// const fs = require('fs')
 
 // fs.renameSync('./new_file.txt', './new_file_renamed.txt') // rename
 // fs.renameSync('./new_dir/new_file_renamed.txt', './newfile.txt',) // move & rename
 // fs.unlinkSync('new_file_renamed.txt') // remove
 
 // # rename move and remove dirs #
-//const fs = require('fs')
+// const fs = require('fs')
 
-//fs.renameSync('./images', './images_files')
-//fs.renameSync('./new_dir', './images_files/images_list')
+// // fs.renameSync('./meu', './images_files')
+// // fs.renameSync('./new_dir', './images_files/images_list')
 
-// empty the images_list folder first..
+// // // empty the images_list folder first..
 // fs.readdirSync('./images_files/images_list').forEach(file => {
 //     fs.renameSync('./images_files/images_list/' + file, './images_files/' + file)
 // })
 
-// ..then try to delete it
+// // // ..then try to delete it
 // fs.rmdir('./images_files/images_list', (err) => {
 //     if (err) throw err
 // })
 
 // writable and readable stream
-//const fs = require('fs')
+const fs = require('fs')
 
-//const readStream = fs.createReadStream('./text.md', 'utf-8')
-//const writeStream = fs.createWriteStream('./text_copy.md', 'utf-8');
+const readStream = fs.createReadStream('./text.md', 'utf-8')
+const writeStream = fs.createWriteStream('./text_copy.md', 'utf-8');
 // approach 1
-// readStream.on('data', (chunk) => {
-//     writeStream.write(chunk)
-// })
+readStream.on('data', (chunk) => {
+    writeStream.write(chunk)
+})
 
-// readStream.on('end', () => {
-//     writeStream.end()
-// })
+readStream.on('end', () => {
+    writeStream.end()
+})
 
 //approach 2
 //readStream.pipe(writeStream).on('error', (err) => console.log(err))
