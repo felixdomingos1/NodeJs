@@ -94,7 +94,7 @@
 //     fs.renameSync('./images_files/images_list/' + file, './images_files/' + file)
 // })
 
-// // // ..then try to delete it
+// ..then try to delete it
 // fs.rmdir('./images_files/images_list', (err) => {
 //     if (err) throw err
 // })
