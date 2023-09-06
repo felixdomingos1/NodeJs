@@ -79,9 +79,9 @@
 // # renaming, moving and removing files #
 const fs = require('fs')
 
-fs.renameSync('./new_file.txt', './new_file_renamed.txt') // rename
+// fs.renameSync('./new_file.txt', './new_file_renamed.txt') // rename
 // fs.renameSync('./new_dir/new_file_renamed.txt', './newfile.txt',) // move & rename
-// fs.unlinkSync('newfile.txt') // remove
+// fs.unlinkSync('new_file_renamed.txt') // remove
 
 // # rename move and remove dirs #
 //const fs = require('fs')
