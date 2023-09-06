@@ -65,20 +65,23 @@
 // })
 
 // # create directories #
-const fs = require('fs')
+// const fs = require('fs')
 
-if (fs.existsSync('new_dir')) return;
+// const directName = 'teu'
 
-fs.mkdir('new_dir', (err) => {
-    if (err) throw err
-})
+
+// if (fs.existsSync(directName)) return ;
+
+// fs.mkdir(directName, (err) => {
+//     if (err) throw err
+// })
 
 // # renaming, moving and removing files #
-//const fs = require('fs')
+const fs = require('fs')
 
-//fs.renameSync('./new_file.txt', './new_file_renamed.txt') // rename
-//fs.renameSync('./new_dir/new_file_renamed.txt', './newfile.txt',) // move & rename
-//fs.unlinkSync('newfile.txt') // remove
+fs.renameSync('./new_file.txt', './new_file_renamed.txt') // rename
+// fs.renameSync('./new_dir/new_file_renamed.txt', './newfile.txt',) // move & rename
+// fs.unlinkSync('newfile.txt') // remove
 
 // # rename move and remove dirs #
 //const fs = require('fs')
